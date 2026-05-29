@@ -34,7 +34,7 @@ const Manager = () => {
     const handleDelete = async(id)=>{
         let a = confirm("Are you sure you want to delete this password")
         if(a){
-            let res = await fetch("http://localhost:3000",{
+            let res = await fetch("https://passwordmanager-1-vl26.onrender.com/",{
                 method: "DELETE",
                 headers: {
                     "Content-Type": "application/json"
@@ -96,14 +96,14 @@ const Manager = () => {
         });
         let uid = uuidv4()
         // if any such id exist in db delete it
-        await fetch("http://localhost:3000",{
+        await fetch("https://passwordmanager-1-vl26.onrender.com/",{
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({id:form.id})
         })
-        let res = await fetch("http://localhost:3000",{
+        let res = await fetch("https://passwordmanager-1-vl26.onrender.com/",{
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -119,9 +119,8 @@ const Manager = () => {
         })
     }
     const getPasswords = async()=>{
-        let req = await fetch("http://localhost:3000")
+        let req = await fetch("https://passwordmanager-1-vl26.onrender.com/")
         let passwords = await req.json()
-        console.log(passwords)
         setSaveL(passwords)
     }
     useEffect(() => {
