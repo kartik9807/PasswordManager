@@ -1,0 +1,7 @@
+https://lordicon.com/ --> animated icons
+https://bg.ibelick.com/ --> bg in tailwind
+
+
+React-toastify introduction links
+https://github.com/fkhadra/react-toastify
+https://fkhadra.github.io/react-toastify/introduction

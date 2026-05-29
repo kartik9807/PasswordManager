@@ -1,0 +1,9 @@
+@import "tailwindcss";
+@layer components {
+  .myinput-css {
+    @apply rounded-full p-1 px-3 border-2 border-green-300 bg-green-50;
+  }
+  .myscrollBar{
+    @apply [&::-webkit-scrollbar]:w-0
+  }
+}
